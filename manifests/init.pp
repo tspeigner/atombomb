@@ -1,4 +1,10 @@
-package { 'atom':
-  ensure   => latest,
-  provider => 'chocolatey',
+#atombomb
+#Install Atom on Windows.
+
+class atombomb {
+
+  package { 'atom':
+    ensure   => latest,
+    provider => 'chocolatey',
+  }
 }
