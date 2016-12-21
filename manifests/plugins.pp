@@ -1,15 +1,6 @@
-class atombomb::plugins {
-  package { 'atom-lint':
-    ensure   => latest,
-    provider => 'apm',
-  }
-  package { 'linter':
-    ensure   => latest,
-    provider => 'apm',
-  }
-
-  package { 'linter-puppet-lint':
-    ensure   => latest,
-    provider => 'apm',
-  }
+Package{
+  provider => apm,
+  ensure   => latest,
 }
+
+package {['linter','travis-ci-status','merge-conflicts','language-puppet','linter-puppet-lint']:}
