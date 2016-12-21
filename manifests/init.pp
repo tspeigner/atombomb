@@ -1,12 +1,9 @@
 #atombomb
 #Install Atom on Windows.
-
-include atombomb::plugins
-
-class atombomb {
-
-  package { 'atom':
+ 
+  Package{
+    provider => apm,
     ensure   => latest,
-    provider => 'chocolatey',
   }
-}
+
+package {['linter','travis-ci-status','merge-conflicts','language-puppet','linter-puppet-lint']:}
