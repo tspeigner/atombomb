@@ -9,16 +9,16 @@ class atombomb {
   }
   package { 'atom-lint':
     ensure   => latest,
-    provider => apm,
+    provider => 'apm',
   }
   package { 'linter':
     ensure   => latest,
-    provider => apm,
+    provider => 'apm',
   }
 
   package { 'linter-puppet-lint':
     ensure   => latest,
-    provider => apm,
+    provider => 'apm',
   }
 
 }
