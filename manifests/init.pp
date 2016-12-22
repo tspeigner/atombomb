@@ -4,7 +4,7 @@
 class atombomb {
   
   package { 'atom':
-    ensure   => absent,
+    ensure   => latest,
     provider => 'chocolatey',
   }
   
