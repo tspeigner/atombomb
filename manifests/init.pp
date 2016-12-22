@@ -8,23 +8,31 @@ class atombomb {
     provider => 'chocolatey',
   }
   
-  package { 'atom-lint':
-    ensure   => latest,
+  Package{
     provider => apm,
-  } 
-  
-  package { 'puppet-lint':
     ensure   => latest,
-    provider => apm,
   }
+
+   package {['linter','atom-lint','puppet-lint','git-plus','language-puppet','sync-on-save','language-docker','advanced-open-file','file-icons','terminal-plus',  ]:}
   
-  package { 'git-plus':
-    ensure   => latest,
-    provider => apm,
-  }
   
-  package { 'language-puppet':
-    ensure   => latest,
-    provider => apm,
-  }
+ # package { 'atom-lint':
+ #   ensure   => latest,
+ #   provider => apm,
+ #} 
+ # 
+ # package { 'puppet-lint':
+ #   ensure   => latest,
+ #   provider => apm,
+ # }
+ # 
+ # package { 'git-plus':
+ #   ensure   => latest,
+ #   provider => apm,
+ # }
+ # 
+ # package { 'language-puppet':
+ #   ensure   => latest,
+ #   provider => apm,
+ # }
 }
