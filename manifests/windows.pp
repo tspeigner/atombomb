@@ -1,13 +1,13 @@
 #atombomb
-#Install Atom on Windows.
-#'linter-puppet-lint',
 class atombomb::windows {
 
+#Install Atom on Windows.
   package { 'atom':
     ensure   => latest,
     provider => 'chocolatey',
   }
 
+#Install packages with APM
   Package{
     provider => apm,
     ensure   => latest,

@@ -8,3 +8,7 @@ Get coding.
 
 git Tutorial
 [Codecademy Git Tutorial](https://www.codecademy.com/learn/learn-git)
+
+Work in Progress:
+Finish setting up environment
+Plugin, Abir?
