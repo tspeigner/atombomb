@@ -1,6 +1,13 @@
 #atombomb
 class atombomb::windows {
 
+include windows_path
+
+windows_path { 'Add a PATH entry if it is not there yet':
+  ensure => present,
+  directory => 'C:\Users\Administrator\AppData\Local\atom\bin'
+ }
+
 #Install Atom on Windows.
   package { 'atom':
     ensure   => latest,
