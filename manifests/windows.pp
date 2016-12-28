@@ -3,10 +3,10 @@ class atombomb::windows {
 
 include windows_path
 
-#windows_path { 'Add a PATH entry if it is not there yet':
-#  ensure => present,
-#  directory => 'C:\Users\Administrator\AppData\Local\atom\bin'
-# }
+windows_path { 'Add a PATH entry if it is not there yet':
+  ensure => absent,
+  directory => 'C:\Users\Administrator\AppData\Local\atom\bin'
+ }
 #
 # windows_path { 'chocolatey path entry':
 #   ensure => present,
