@@ -8,6 +8,11 @@ windows_path { 'Add a PATH entry if it is not there yet':
   directory => 'C:\Users\Administrator\AppData\Local\atom\bin'
  }
 
+ windows_path { 'Add a PATH entry if it is not there yet':
+   ensure => present,
+   directory => 'C:\ProgramData\chocolatey\bin'
+  }
+
 #Install Atom on Windows.
   package { 'atom':
     ensure   => latest,
