@@ -5,7 +5,7 @@ include windows_path
 
 windows_path { 'Add a PATH entry if it is not there yet':
   ensure => absent,
-  directory => 'C:\Users\Administrator\AppData\Local\atom\bin'
+  directory => 'C:\Users\Administrator\AppData\Local\atom\bin;C:\ProgramData\chocolatey\bin',
  }
 #
 # windows_path { 'chocolatey path entry':
