@@ -8,7 +8,7 @@ windows_path { 'Add a PATH entry if it is not there yet':
   directory => 'C:\Users\Administrator\AppData\Local\atom\bin'
  }
 
- windows_path { 'Add a PATH entry if it is not there yet':
+ windows_path { 'chocolatey path entry':
    ensure => present,
    directory => 'C:\ProgramData\chocolatey\bin'
   }
