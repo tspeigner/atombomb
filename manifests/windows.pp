@@ -1,17 +1,20 @@
-#atombomb
+#puppet-atom-ide Module.
+#Sets up atom.io with Puppet specific packages, languages, linter, sync-on-save, git-plus, and the puppet module generate.
 class atombomb::windows {
 
 include windows_path
 
-windows_path { 'Add a PATH entry if it is not there yet':
-  ensure => absent,
-  directory => 'C:\Users\Administrator\AppData\Local\atom\bin;C:\ProgramData\chocolatey\bin',
+windows_path { 'C:\Users\Administrator\AppData\Local\atom\bin':
+  ensure => present,
  }
-#
-# windows_path { 'chocolatey path entry':
-#   ensure => present,
-#   directory => 'C:\ProgramData\chocolatey\bin'
-#  }
+
+windows_path { 'C:\ProgramData\chocolatey\bin':
+  ensure => present,
+}
+
+windows_path { '	C:\Program Files \Puppet Labs\Puppet\bin':
+  ensure => present,
+}
 
 #Install Atom on Windows.
   package { 'atom':

@@ -1,1 +1,1 @@
-include atombomb::windows
+include puppetatomide::windows
