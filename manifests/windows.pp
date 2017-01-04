@@ -1,6 +1,6 @@
 #puppet-atom-ide Module.
 #Sets up atom.io with Puppet specific packages, languages, linter, sync-on-save, git-plus, and the puppet module generate.
-class puppetatomide::windows {
+class puppet_atom_env::windows {
 
 include windows_path
 
