@@ -23,7 +23,7 @@ windows_path { '	C:\Program Files \Puppet Labs\Puppet\bin':
   }
 
 #Install packages with APM
-  Package{
+  Package {
     provider => apm,
     ensure   => present,
   }
