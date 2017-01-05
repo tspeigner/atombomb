@@ -2,16 +2,19 @@
 #Sets up atom.io with Puppet specific packages, languages, linter, sync-on-save, git-plus, and the puppet module generate.
 class puppet_atom_env::windows {
 
-#include windows_path
-#
-#windows_path { 'C:\Users\Administrator\AppData\Local\atom\bin':
-#  ensure => present,
-# }
+$provider_type=
+
+case $::kernel {
+    'windows': { include chocolatey
+      $provider_type='chocolatey' }
+    'darwin' : { include brew
+      $provider_type='brew' }
+  }
 
 #Install Atom on Windows.
   package { 'atom':
     ensure   => present,
-    provider => 'chocolatey',
+    provider => $provider_type,
   }
 
 #Install packages with APM
