@@ -1,13 +1,13 @@
 #puppet-atom-ide Module.
 #Sets up atom.io with Puppet specific packages, languages, linter, sync-on-save, git-plus, and the puppet module generate.
-class puppet_atom_env::windows {
+class puppet_atom_env::osx {
 
-include chocolatey
+include brew
 
 #Install Atom on Windows.
   package { 'atom':
     ensure   => present,
-    provider => 'chocolatey',
+    provider => 'brew',
   }
 
 #Install packages with APM
