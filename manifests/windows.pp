@@ -2,11 +2,11 @@
 #Sets up atom.io with Puppet specific packages, languages, linter, sync-on-save, git-plus, and the puppet module generate.
 class puppet_atom_env::windows {
 
-include windows_path
-
-windows_path { 'C:\Users\Administrator\AppData\Local\atom\bin':
-  ensure => present,
- }
+#include windows_path
+#
+#windows_path { 'C:\Users\Administrator\AppData\Local\atom\bin':
+#  ensure => present,
+# }
 
 #Install Atom on Windows.
   package { 'atom':
