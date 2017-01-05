@@ -2,7 +2,7 @@
 #Sets up atom.io with Puppet specific packages, languages, linter, sync-on-save, git-plus, and the puppet module generate.
 class puppet_atom_env::windows {
 
-include chocolatey
+#include chocolatey
 
 #Install Atom on Windows.
   package { 'atom':
