@@ -18,6 +18,7 @@ class puppet_atom_env::windows {
   Package {
     provider => apm,
     ensure   => present,
+    require => Package['atom'],
   }
 
    package {['linter','atom-lint','linter-puppet-lint','language-puppet','sync-on-save','language-docker','advanced-open-file','file-icons','terminal-plus', 'aligner','aligner-puppet','auto-detect-indentationb','file-type-icons','git-plus','highlight-selected','minimap','minimap-cursorline','minimap-highlight-selected','minimap-linter','minimap-pigments','minimap-selection','open-recent','project-manager', 'puppet-module-generator' ]:}
