@@ -7,5 +7,4 @@ class {
       #'darwin' : { include brew
       #  $provider_type='brew' }
     }
-
 }
